@@ -3,15 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://<your-username>.github.io/<repository-name>",
-  "scripts": {
+    "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "react-scripts start"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
