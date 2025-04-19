@@ -44,7 +44,7 @@ function App() {
           <div className="flex justify-between h-16 items-center">
             <div className="flex items-center">
               <img
-                src="https://imgur.com/QW3cl65.png" // Replace with your logo URL
+                src="https://i.imgur.com/QW3cl65.png" // Corrected URL
                 alt="Logo"
                 className="h-25 w-24 rounded-full"
               />
@@ -210,42 +210,42 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img 
-                src="https://imgur.com/qkOFpVQ.jpeg"
+                src="https://i.imgur.com/qkOFpVQ.jpg" // Corrected URL
                 alt="Digital X-Ray System"
                 className="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
               />
             </div>
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img 
-                src="https://imgur.com/xiwK3Qy.jpeg"
+                src="https://i.imgur.com/xiwK3Qy.jpg" // Corrected URL
                 alt="Modern Dental Equipment"
                 className="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
               />
             </div>
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img 
-                src="https://imgur.com/71JwHT6.jpeg"
+                src="https://i.imgur.com/71JwHT6.jpg" // Corrected URL
                 alt="Treatment Room"
                 className="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
               />
             </div>
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img 
-                src="https://imgur.com/d91xRTs.jpeg"
+                src="https://i.imgur.com/d91xRTs.jpg" // Corrected URL
                 alt="Dental Chair"
                 className="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
               />
             </div>
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img 
-                src="https://imgur.com/h6brYt9.jpeg"
+                src="https://i.imgur.com/h6brYt9.jpg" // Corrected URL
                 alt="Digital Imaging"
                 className="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
               />
             </div>
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img 
-                src="https://imgur.com/b2lEgw1.jpeg"
+                src="https://i.imgur.com/b2lEgw1.jpg" // Corrected URL
                 alt="Modern Treatment Room"
                 className="w-full h-64 object-cover transform hover:scale-105 transition duration-300"
               />
