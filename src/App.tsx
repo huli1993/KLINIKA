@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { Bluetooth as  Clock, Phone, MapPin, Heart, Shield, Sparkles, Menu, X, Mail } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Bluetooth as Clock, Phone, MapPin, Heart, Shield, Sparkles, Menu, X, Mail, Instagram, MessageCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 function App() {
@@ -7,6 +7,10 @@ function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    document.title = "London Dental Care";
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,6 +55,7 @@ function App() {
               <a href="#home" className="text-gray-900 hover:text-blue-600 px-3 py-2 font-medium">Home</a>
               <a href="#about" className="text-gray-900 hover:text-blue-600 px-3 py-2 font-medium">Rreth nesh</a>
               <a href="#gallery" className="text-gray-900 hover:text-blue-600 px-3 py-2 font-medium">Galeria</a>
+              <a href="#services" className="text-gray-900 hover:text-blue-600 px-3 py-2 font-medium">Services</a>
               <a href="#contact" className="text-gray-900 hover:text-blue-600 px-3 py-2 font-medium">Contact</a>
             </div>
             {/* Mobile Menu Button */}
@@ -87,6 +92,13 @@ function App() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Gallery
+                </a>
+                <a
+                  href="#services"
+                  className="block px-3 py-2 text-gray-900 hover:text-blue-600 font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Services
                 </a>
                 <a
                   href="#contact"
@@ -242,6 +254,58 @@ function App() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section id="services" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900">Our Services</h2>
+            <p className="mt-4 text-lg text-gray-600">We offer a wide range of dental services to help you achieve your perfect smile.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
+            {/* Emax Veneers */}
+            <div className="p-6 bg-gray-50 rounded-lg shadow-md text-center h-full flex flex-col justify-between">
+              <Sparkles className="h-10 w-10 text-blue-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold mb-2">Emax Veneers</h3>
+              <p className="text-gray-600">Achieve a natural and beautiful smile with our high-quality Emax veneers.</p>
+            </div>
+            {/* Zirconia Crowns */}
+            <div className="p-6 bg-gray-50 rounded-lg shadow-md text-center h-full flex flex-col justify-between">
+              <Shield className="h-10 w-10 text-blue-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold mb-2">Zirconia Crowns</h3>
+              <p className="text-gray-600">Durable and aesthetic crowns for restoring your teeth.</p>
+            </div>
+            {/* Composite Veneers */}
+            <div className="p-6 bg-gray-50 rounded-lg shadow-md text-center h-full flex flex-col justify-between">
+              <Heart className="h-10 w-10 text-blue-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold mb-2">Composite Veneers</h3>
+              <p className="text-gray-600">Affordable and effective veneers for a brighter smile.</p>
+            </div>
+            {/* Implants */}
+            <div className="p-6 bg-gray-50 rounded-lg shadow-md text-center h-full flex flex-col justify-between">
+              <MapPin className="h-10 w-10 text-blue-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold mb-2">Implants</h3>
+              <p className="text-gray-600">Replace missing teeth with our advanced dental implant solutions.</p>
+            </div>
+            {/* Empty Placeholder */}
+            <div className="p-6"></div>
+            {/* Clear Aligners */}
+            <div className="p-6 bg-gray-50 rounded-lg shadow-md text-center h-full flex flex-col justify-between">
+              <Shield className="h-10 w-10 text-blue-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold mb-2">Clear Aligners</h3>
+              <p className="text-gray-600">Straighten your teeth discreetly with our advanced clear aligner solutions.</p>
+            </div>
+            {/* Braces */}
+            <div className="p-6 bg-gray-50 rounded-lg shadow-md text-center h-full flex flex-col justify-between">
+              <Heart className="h-10 w-10 text-blue-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold mb-2">Braces</h3>
+              <p className="text-gray-600">Achieve a perfect smile with our modern and effective braces treatments.</p>
+            </div>
+            {/* Empty Placeholder */}
+            <div className="p-6"></div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact */}
       <section id="contact" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -279,6 +343,34 @@ function App() {
                   <p className="text-gray-600">Mon-Fri: 9:00 AM - 6:00 PM</p>
                   <p className="text-gray-600">Sat: 9:00 AM - 2:00 PM</p>
                 </div>
+              </div>
+              <div className="flex items-center">
+                <a
+                  href="https://www.instagram.com/london_dental_care/" // Replace with your Instagram URL
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-gray-900 hover:text-blue-600"
+                >
+                  <Instagram className="h-6 w-6 text-blue-600 mr-3" />
+                  <div>
+                    <h3 className="font-semibold">Instagram</h3>
+                    <p className="text-gray-600">@london_dental_care</p> {/* Replace with your Instagram handle */}
+                  </div>
+                </a>
+              </div>
+              <div className="flex items-center">
+                <a
+                  href="https://wa.me/+355686880666" // Replace with your WhatsApp link (use your phone number in international format)
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-gray-900 hover:text-blue-600"
+                >
+                  <MessageCircle className="h-6 w-6 text-blue-600 mr-3" />
+                  <div>
+                    <h3 className="font-semibold">WhatsApp</h3>
+                    <p className="text-gray-600">+355686880666</p> {/* Replace with your WhatsApp number */}
+                  </div>
+                </a>
               </div>
               <div className="pt-4">
                 <h3 className="font-semibold text-xl mb-2">Your Dentist</h3>
